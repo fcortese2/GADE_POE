@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 917876963293843809}
   - component: {fileID: 917876963293843808}
   - component: {fileID: 917876963293843811}
+  - component: {fileID: 1725133146}
   m_Layer: 0
   m_Name: Knight_Blue
   m_TagString: Team1
@@ -78,6 +79,19 @@ MonoBehaviour:
   UNIT: {fileID: 11400000, guid: 1c63c82edbe11014cb9276a41a9d8b77, type: 2}
   bullet: {fileID: 6662688254718994133, guid: c4d258e4f3bb3c7419ba9e29b7ee32d9, type: 3}
   shootingPoint: {fileID: 0}
+--- !u!65 &1725133146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917876963293843814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.82, y: 1.4, z: 0.82}
+  m_Center: {x: 0, y: 0.89, z: 0}
 --- !u!1 &1498978808940248139
 GameObject:
   m_ObjectHideFlags: 0
