@@ -30,4 +30,17 @@ public class UI_Functions : MonoBehaviour
             timescaleText.text = ">>";
         }
     }
+
+    public void PlayPause()
+    {
+        if (Time.timeScale != 0.001f)
+        {
+            Time.timeScale = 0.001f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+        }
+        
+    }
 }
