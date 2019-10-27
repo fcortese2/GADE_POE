@@ -9,13 +9,20 @@ public class BulletScript : MonoBehaviour
     public float bulletProximitySensitivity = .5f;
     [Range(1f, 5f)] public float bulletSpeed;
 
+    private Vector3 offset = new Vector3(0,1,0);
+
     public GameObject Target { get { return target; } set { target = value; } }
     public float BulletDamage { get { return bulletDamage; } set { bulletDamage = value; } }
+
+    void Start()
+    {
+        this.transform.LookAt(target.transform.position);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(this.transform.position, target.transform.position) <= bulletProximitySensitivity)
+        if (Vector3.Distance(this.transform.position, target.transform.position + offset) <= bulletProximitySensitivity)
         {
             target.GetComponent<RangedUnit>().DealDamage(bulletDamage);
             Object.Destroy(this.gameObject);
@@ -31,8 +38,8 @@ public class BulletScript : MonoBehaviour
         }
         else
         {
-            this.transform.position = Vector3.Lerp(this.transform.position, target.transform.position, bulletSpeed * Time.deltaTime);
-            this.transform.LookAt(target.transform.position);
+            this.transform.position = Vector3.Lerp(this.transform.position, target.transform.position + offset, bulletSpeed * Time.deltaTime);
+            
         }
 
     }
