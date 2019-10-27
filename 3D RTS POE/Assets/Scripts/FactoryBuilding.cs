@@ -17,7 +17,7 @@ public class FactoryBuilding : MonoBehaviour
     void Start()
     {
         resources = GameObject.Find("GM").GetComponent<ResourceStats>();
-        health = Random.Range(60f, 100f);
+        health = Random.Range(100f, 200f);
     }
 
     // Update is called once per frame

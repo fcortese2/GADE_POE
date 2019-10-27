@@ -25,6 +25,8 @@ public class CameraMovement : MonoBehaviour
             vertSpeed -= 1.5f;
         }
 
+        speed = Mathf.Clamp(speed, 0.1f, Mathf.Infinity);
+        vertSpeed = Mathf.Clamp(vertSpeed, 0, Mathf.Infinity);
 
         if (Input.GetKey(KeyCode.W))
         {

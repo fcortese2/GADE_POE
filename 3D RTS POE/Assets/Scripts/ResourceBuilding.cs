@@ -19,6 +19,7 @@ public class ResourceBuilding : MonoBehaviour
     {
         resources = GameObject.Find("GM").GetComponent<ResourceStats>();
         InvokeRepeating("SpawnResources", generateAfterSeconds, generateAfterSeconds);
+        health = Random.Range(60f, 100f);
         resourcePool = Random.Range(40f, 80f);
         steelPerRound = Random.Range(1, 6);
         woodPerRound = Random.Range(1, 6);

@@ -18,6 +18,8 @@ public class RangedUnit : MonoBehaviour
 
     private float currentHealth;
 
+    public float CurrentHealth { get { return currentHealth; } }
+
     private void Start()
     {
         agent = this.GetComponent<NavMeshAgent>();
@@ -163,7 +165,7 @@ public class RangedUnit : MonoBehaviour
             }
         }
         
-        Debug.Log("Hit");
+        //Debug.Log("Hit");
     }
 
     #endregion

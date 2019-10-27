@@ -66,7 +66,7 @@ MonoBehaviour:
   spawnInterval: 5
   unitsToSpawn:
   - {fileID: 2285756921231305564, guid: e3e7e881e6529e0449dc950741a74f55, type: 3}
-  - {fileID: 2285756921231305564, guid: e3e7e881e6529e0449dc950741a74f55, type: 3}
+  - {fileID: 173409798037204410, guid: 95e31c0a161d25b4eb66319c03a0d8b7, type: 3}
 --- !u!1 &660206688690600355
 GameObject:
   m_ObjectHideFlags: 0
