@@ -1,6 +1,11 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
+/*
+ * DEPRECATED. DO NOT USE.
+ * Tool used for prototype. Does not work with GitHub builds.
+ */
+
 public class RandomMap : EditorWindow   //TOOL BY FILIPPO CORTESE
 {
     private Object spawnPrefab;
@@ -14,10 +19,10 @@ public class RandomMap : EditorWindow   //TOOL BY FILIPPO CORTESE
     private bool checkedForPoints = false;
 
 
-    [MenuItem("Window/Map Tools")]
+    [MenuItem("Window/Map Tools[DEPRECATED]")]
     public static void OpenWindow()
     {
-        GetWindow<RandomMap>("Map Tools");
+        GetWindow<RandomMap>("Map Tools[DEPRECATED]");
     }
 
     void OnGUI() 

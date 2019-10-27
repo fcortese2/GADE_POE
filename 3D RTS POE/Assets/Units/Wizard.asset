@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Wizard
   m_EditorClassIdentifier: 
   UnitName: WIzard
-  attack: 25
-  defence: 120
-  speed: 0.22
-  range: 4
-  fireRate: 2
+  attack: 15
+  defence: 25
+  speed: 1
+  range: 7
+  fireRate: 7

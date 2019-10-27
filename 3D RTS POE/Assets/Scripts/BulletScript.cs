@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    #region "SETUP"
     protected GameObject target;
     protected float bulletDamage;
     public float bulletProximitySensitivity = .5f;
@@ -19,14 +20,38 @@ public class BulletScript : MonoBehaviour
         this.transform.LookAt(target.transform.position);
     }
 
-    // Update is called once per frame
+    #endregion
+
     void Update()
     {
         if (Vector3.Distance(this.transform.position, target.transform.position + offset) <= bulletProximitySensitivity)
         {
-            target.GetComponent<RangedUnit>().DealDamage(bulletDamage);
-            Object.Destroy(this.gameObject);
-            target = null;
+            if (target.GetComponent<Wizard>())
+            {
+                target.GetComponent<Wizard>().DealDamage(bulletDamage);
+            }
+            else if (!target.GetComponent<RangedUnit>() && !target.GetComponent<ResourceBuilding>())
+            {
+                target.GetComponent<FactoryBuilding>().DealDamage(bulletDamage);
+                Object.Destroy(this.gameObject);
+                target = null; //in case obj not destroyed
+            }
+            else
+            {
+                if (!target.GetComponent<RangedUnit>())
+                {
+                    target.GetComponent<ResourceBuilding>().DealDamage(bulletDamage);
+                    Object.Destroy(this.gameObject);
+                    target = null; //in case obj not destroyed
+                }
+                else
+                {
+                    target.GetComponent<RangedUnit>().DealDamage(bulletDamage);
+                    Object.Destroy(this.gameObject);
+                    target = null; //in case obj not destroyed
+                }
+            }
+            
         }
     }
 
