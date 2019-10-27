@@ -25,7 +25,7 @@ public class FactoryBuilding : MonoBehaviour
         GameObject objToSpawn = RandomGameObject();
 
         GameObject.Instantiate(objToSpawn, this.transform.Find("SpawnPoint").transform.position, this.transform.Find("SpawnPoint").transform.rotation);
-        yield return new WaitForSecondsRealtime(spawnInterval);
+        yield return new WaitForSeconds(spawnInterval);
         spawning = false;
     }
 

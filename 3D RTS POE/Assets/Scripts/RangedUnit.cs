@@ -41,9 +41,11 @@ public class RangedUnit : MonoBehaviour
         }
         else if (Target != null)
         {
+            agent.isStopped = false;
             if (UNIT.range < Vector3.Distance(this.transform.position, Target.transform.position) )           //if other unit is not in range
             {
                 agent.destination = target.transform.position;
+
                 agent.isStopped = false;
             }
             else if (UNIT.range >= Vector3.Distance(this.transform.position, Target.transform.position) && isFiring == false)
