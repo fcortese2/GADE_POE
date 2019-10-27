@@ -11,6 +11,7 @@ TagManager:
   - SpawnPoint
   - Ground
   - Team3
+  - Ground1
   layers:
   - Default
   - TransparentFX
